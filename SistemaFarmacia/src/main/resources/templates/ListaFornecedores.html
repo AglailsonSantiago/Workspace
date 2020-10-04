@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone 1</th>
+      <th scope="col">Telefone 2</th>
+      <th scope="col">Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each ="fornecedor : ${listaDeFornecedores}">
+    	<td th:text="${fornecedor.codForn}"></td>
+      	<td th:text="${fornecedor.nomeForn}"></td>
+      	<td th:text="${fornecedor.telefone1}"></td>
+      	<td th:text="${fornecedor.telefone2}"></td>
+      	<td>
+      	<a class="btn btn-primary" th:href="@{/fornecedor/editar/{codigo} (codigo = ${fornecedor.codForn})}">Editar</a>
+      	<a class="btn btn-danger" th:href="@{/fornecedor/excluir/{codigo} (codigo = ${fornecedor.codForn})}">Excluir</a>
+      	</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="/fornecedor/salvar" method="POST" th:object="${fornecedor}">
+			<input type="hidden" th:field="*{codForn}">
+			Nome: <input type="text" required th:field="*{nomeForn}"> <br>
+			<h3>Contato:</h3> <br> 
+			Telefone 1:<input type="text" required th:field="*{telefone1}"> <br>
+			Telefone 2 *:<input type="text" th:field="*{telefone2}"> <br>
+			<br>
+				<input type="submit" value="Cadastrar">
+		</form>
+	</body>
+</html>
