@@ -14,7 +14,6 @@ public class Fornecedor {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@OneToMany(mappedBy="codForn")
 	private Long codForn;
 	
 	private String nomeForn;
@@ -49,6 +48,11 @@ public class Fornecedor {
 	public void setTelefone2(String telefone2) {
 		this.telefone2 = telefone2;
 	}
-	
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
+	}
 	
 }

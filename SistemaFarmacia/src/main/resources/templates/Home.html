@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sistema de Farmácia</title>
+
+    <!-- Custom fonts for this template-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/css/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
-<body>
-Olá Mundo!
+
+<body id="page-top" style="padding-bottom: 0px;">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+                <img style="height: 400%" src="/img/logo.png">
+
+            </a>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="dropdown">
+                    <h3>Produtos</h3>
+                </a>
+                <div class="dropdown-menu btn bg-gradient-danger" aria-labelledby="dropdownMenuButton">
+                    <a class="nav-link" href="/fornecedor/listar">
+                        <h4>Listar Produtos</h4>
+                    </a>
+                    <a class="nav-link" href="/fornecedor/cadastro">
+                        <h4>Cadastrar novo Produto</h4>
+                    </a>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="dropdown">
+                    <h3>Fornecedor</h3>
+                </a>
+                <div class="dropdown-menu btn bg-gradient-danger" aria-labelledby="dropdownMenuButton">
+                    <a class="nav-link" href="/fornecedor/listar">
+                        <h4>Listar Fornecedores</h4>
+                    </a>
+                    <a class="nav-link" href="/fornecedor/cadastro">
+                        <h4>Cadastrar novo Fornecedor</h4>
+                    </a>
+                </div>
+            </li>
+
+
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/farma1.jpg" class="d-block w-100" alt="New York">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/farma2.jpeg" class="d-block w-100" alt="New York">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/farma3.jpeg" class="d-block w-100" alt="New York">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/sb-admin-2.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/demo/chart-area-demo.js"></script>
+    <script src="/js/demo/chart-pie-demo.js"></script>
 
 </body>
+
 </html>

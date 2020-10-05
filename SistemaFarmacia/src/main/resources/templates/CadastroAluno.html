@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sistema de Universidade - SU</title>
+   <!--===============================================================================================--> 
+    <link rel="icon" type="image/png" href="img/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/animate.css">
+    <!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="/css/hamburgers.min.css">
+   <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!--===============================================================================================-->
+
+   <!-- Custom fonts for this template-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/css/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+  </head>
+
+  <body id="page-top" style="padding-bottom: 0px;">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/secretario/inicio">
+          <img  style="height: 200% !important;" src="/img/logo.png">
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="/secretario/inicio">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Bem-vindo
+        </div>
+       <li class="nav-item">
+          <a class="nav-link" href="/secretario/cadastroDisciplina">
+            <i class="fas fa-book-reader"></i>
+            <span>Cadastrar Disciplina</span></a>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link" href="/secretario/cadastroTurma">
+            <i class="fas fa-book-open"></i>
+            <span>Cadastrar Turma</span></a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="/secretario/cadastroAluno">
+            <i class="fas fa-book-open"></i>
+            <span>Cadastrar Aluno</span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/secretario/cadastroProfessor">
+            <i class="fas fa-book-open"></i>
+            <span>Cadastrar Professor</span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/secretario/alunos">
+            <i class="fas fa-book-open"></i>
+            <span>Listar Alunos</span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/secretario/professores">
+            <i class="fas fa-book-open"></i>
+            <span>Listar Professores</span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/secretario/disciplinas">
+            <i class="fas fa-book-open"></i>
+            <span>Listar Disciplinas</span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/secretario/turmas">
+            <i class="fas fa-book-open"></i>
+            <span>Listar Turmas</span></a>
+      </li>
+
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <ul class="navbar-nav ml-auto">
+
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Secretario(a)</span>
+                  <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Configurações
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+
+          </nav>
+
+  		<div class="limiter">
+  				<center>
+            <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
+              <form class="login100-form validate-form" action = "/secretario/salvarAluno" method="POST">
+                <span class="login100-form-title p-b-55">
+                  Cadastro de Aluno
+                </span>
+                <div class="wrap-input100 validate-input m-b-16">
+                  <input class="input100" type="text" id="nome" placeholder="Nome" name="nome">
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <span class="lnr lnr-user"></span>
+                  </span>
+                </div>
+      
+                <div class="wrap-input100 validate-input m-b-16">
+                  <input class="input100" type="text" id="cpf" placeholder="CPF" name="cpf">
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <span class="lnr lnr-license"></span>
+                  </span>
+                </div>
+      
+                <div class="wrap-input100 validate-input m-b-16">
+                  <input class="input100" type="text" id="rg" placeholder="RG" name="rg">
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <span class="lnr lnr-license"></span>
+                  </span>
+                </div>
+      
+                <div class="wrap-input100 validate-input m-b-16">
+                  <input class="input100" type="text" id="curso" placeholder="CURSO" name="curso">
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <span class="lnr lnr-graduation-hat"></span>
+                  </span>
+                </div>
+                <div class="wrap-input100 validate-input m-b-16">
+                  <input class="input100" type="text" id="data_nasc" placeholder="DD-MM-AAAA" name="data_nasc">
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                      <span class="lnr lnr-calendar-full"></span>
+                  </span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-16" data-validate = "forma aceita: abs@cds.com">
+                  <input class="input100" type="text" id="email" placeholder="E-mail" name="email">
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <span class="lnr lnr-envelope"></span>
+                  </span>
+                </div>
+      
+                <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+                  <input class="input100" type="password" id="senha" placeholder="Password" name="senha">
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <span class="lnr lnr-lock"></span>
+                  </span>
+                </div>
+                
+                <div class="container-login100-form-btn p-t-25">
+                  <button class="login100-form-btn">
+                    Cadastrar
+                  </button>
+                </div>
+      
+              </form>
+          </div>
+  			</center>
+
+
+  		
+            
+        <!-- Footer -->
+
+
+
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2019</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="Login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+    <!--Máscaras-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+    <!--===============================================================================================-->  
+    <!--===============================================================================================-->
+    <script src="/js/mascaras.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/js/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/js/main.js"></script>
+
+  </body>
+
+</html>

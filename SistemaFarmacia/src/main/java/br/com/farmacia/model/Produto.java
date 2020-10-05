@@ -60,5 +60,11 @@ public class Produto {
 	public void setQtdProd(int qtdProd) {
 		this.qtdProd = qtdProd;
 	}
+	public Fornecedor getCodForn() {
+		return codForn;
+	}
+	public void setCodForn(Fornecedor codForn) {
+		this.codForn = codForn;
+	}
 
 }
