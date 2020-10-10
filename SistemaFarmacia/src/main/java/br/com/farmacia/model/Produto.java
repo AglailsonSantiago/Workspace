@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Produto {
@@ -17,12 +15,8 @@ public class Produto {
 	private String nomeProd;
 	private String tipoProd;
 	private String marcaProd;
-	private Double precoProd;
 	private int qtdProd;
-	
-	@ManyToOne
-	@JoinColumn(name="codForn")
-	private Fornecedor codForn;
+	private String nomeForn;
 	
 	public Long getCodProd() {
 		return codProd;
@@ -48,23 +42,17 @@ public class Produto {
 	public void setMarcaProd(String marcaProd) {
 		this.marcaProd = marcaProd;
 	}
-	public Double getPrecoProd() {
-		return precoProd;
-	}
-	public void setPrecoProd(Double precoProd) {
-		this.precoProd = precoProd;
-	}
 	public int getQtdProd() {
 		return qtdProd;
 	}
 	public void setQtdProd(int qtdProd) {
 		this.qtdProd = qtdProd;
 	}
-	public Fornecedor getCodForn() {
-		return codForn;
+	public String getNomeForn() {
+		return nomeForn;
 	}
-	public void setCodForn(Fornecedor codForn) {
-		this.codForn = codForn;
+	public void setNomeForn(String nomeForn) {
+		this.nomeForn = nomeForn;
 	}
 
 }

@@ -25,10 +25,6 @@ public class FornecedorServices {
 	public void excluirFornecedor(Long codForn) {
 		fornecedorRepository.deleteById(codForn);
 	}
-	
-	public void editarFornecedor(Long codForn) {
-		
-	}
 
 	public Fornecedor buscarPorId(Long codForn) {
 		return fornecedorRepository.getOne(codForn);

@@ -1,13 +1,9 @@
 package br.com.farmacia.model;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Fornecedor {
@@ -17,11 +13,12 @@ public class Fornecedor {
 	private Long codForn;
 	
 	private String nomeForn;
+	private String rua;
+	private int numero;
+	private String cidade;
+	private String estado;
 	private String telefone1;
 	private String telefone2;
-	
-	@OneToMany(mappedBy="codForn", cascade = CascadeType.ALL)
-	private List<Produto> produtos;
 	
 	
 	public Long getCodForn() {
@@ -36,6 +33,30 @@ public class Fornecedor {
 	public void setNomeForn(String nomeForn) {
 		this.nomeForn = nomeForn;
 	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public String getRua() {
+		return rua;
+	}
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
 	public String getTelefone1() {
 		return telefone1;
 	}
@@ -47,12 +68,6 @@ public class Fornecedor {
 	}
 	public void setTelefone2(String telefone2) {
 		this.telefone2 = telefone2;
-	}
-	public List<Produto> getProdutos() {
-		return produtos;
-	}
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
 	}
 	
 }

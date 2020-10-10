@@ -50,7 +50,6 @@
 			</a>
 
 			<hr class="sidebar-divider">
-
 			<li class="nav-item">
 				<a class="nav-link" href="/home">
 					<h3>Início</h3>
@@ -93,39 +92,34 @@
 			<div class="modelo">
 				<hr class="sidebar-divider">
 				<center>
-					<h3>Cadastro Fornecedor</h3>
+					<h3>Cadastro Produto</h3>
 				</center>
-				<form action="/fornecedor/salvar" method="POST" th:object="${fornecedor}">
+				<form action="/produto/salvar" method="POST" th:object="${produto}">
 					
-					<input type="hidden" th:field="*{codForn}">
+					<input type="hidden" th:field="*{codProd}">
 					<div class="col-md-12">
 						<div class="form-row mb-4">
 							<div class="col-md-12">
-								<input type="text" th:field="*{nomeForn}" class="form-control" placeholder="Nome" required>
+								<input type="text" class="form-control" placeholder="Nome" required th:field="*{nomeProd}">
+							</div>
+						</div>
+						<div class="form-row mb-4">
+							<div class="col-md-4">
+								<input ttype="text" required th:field="*{tipoProd}" class="form-control" placeholder="Tipo">
+							</div>
+							<div class="col-md-4">
+								<input type="text" required th:field="*{marcaProd}" class="form-control" placeholder="Marca">
+							</div>
+							<div class="col-md-4">
+								<input type="number" required th:field="*{qtdProd}" class="form-control" placeholder="Quantidade">
 							</div>
 						</div>
 						<div class="form-row mb-4">
 							<div class="col-md-6">
-								<input type="text" th:field="*{telefone1}" class="form-control" placeholder="Telefone 1" required>
-							</div>
-							<div class="col-md-6">
-								<input type="text" th:field="*{telefone2}" class="form-control" placeholder="Telefone 2">
-							</div>
-						</div>
-						<div class="form-row mb-4">
-							<div class="col-md-10">
-								<input type="text" th:field="*{rua}" class="form-control" placeholder="Rua" required>
-							</div>
-							<div class="col-md-2">
-								<input type="number" th:field="*{numero}" class="form-control" placeholder="Número" required>
-							</div>
-						</div>
-						<div class="form-row mb-4">
-							<div class="col-md-6">
-								<input type="text" th:field="*{cidade}" class="form-control" placeholder="Cidade" required>
-							</div>
-							<div class="col-md-6">
-								<input type="text" th:field="*{estado}" class="form-control" placeholder="Estado" required>
+								<select class="form-control" required th:field="*{nomeForn}">
+									<option value="">Selecione o Fornecedor</option>
+									<option th:each="fornecedor : ${listaDeFornecedores}" th:value = "${fornecedor.nomeForn}" th:text = "${fornecedor.nomeForn}"></option>
+								</select>
 							</div>
 						</div>
 						<center><button type="submit" class="btn btn-success" value="Adicionar">Salvar</button></center>
@@ -134,9 +128,9 @@
 					
 				</form>
 			</div>
-		</div>
+			
 
-	</div>
+		</div>
 	</div>
 
 	<script src="/js/sb-admin-2.min.js"></script>
@@ -148,3 +142,8 @@
 </body>
 
 </html>
+
+
+
+
+

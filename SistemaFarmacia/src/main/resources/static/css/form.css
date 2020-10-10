@@ -1,0 +1,8 @@
+.modelo{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: calc(35% - 100px);
+    left: calc(35% - 100px);
+    background-color: #f8f9fc;
+}
